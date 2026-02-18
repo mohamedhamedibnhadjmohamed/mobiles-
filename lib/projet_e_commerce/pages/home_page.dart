@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projet/projet_e_commerce/mywidgets/carousel_image.dart';
+import 'package:projet/projet_e_commerce/mywidgets/category_grid.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,7 +19,15 @@ class _MyWidgetState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Text("To DO....."),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            ImageCarousel(),
+            CategoryGrid(),
+          ],
+        ),
+      ),
     );
   }
 }
